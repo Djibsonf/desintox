@@ -9,32 +9,39 @@
 <body>
     <header>
         <nav>
-            <a href="#Acceuil" id="acceuil">Acceuil</a>
-            <a href="#Services" id="services">Services</a>
-            <a href="#Tableau" id="tableau">Tableau</a>
-            <a href="#Formulaire" id="formulaire">Formulaire</a>
-            <a href="#Multimedia" id="multimedia">Multimedia</a>
-            <a href="#Semantique" id="semantique">Semantique</a>
+            <ul>
+                    <li><a href="#acceuil" id="acceuil">Acceuil</a></li>
+                    <li><a href="#services" id="services">Services</a></li>
+                    <li><a href="#tableau" id="tableau">Tableau</a></li>
+                    <li><a href="#formulaire" id="formulaire">Formulaire</a></li>
+                    <li><a href="#multimedia" id="multimedia">Multimedia</a></li>
+                    <li><a href="#semantique" id="semantique">Semantique</a></li>
+            </ul>
         </nav>
     </header>
     <main>
+        <h1>Présentation de Site</h1>
         <!-- SECTION ACCEUIL -->
-        <section id="Acceuil">
+        <section id="acceuil">
             <!-- j'utilise des balises comme strong et u pour te montrer ce que je maitrise -->
-        <h1>Présentation</h1>
+        <h2>Acceuil</h2>
         <p>
             Dans cet site nous allons faire une <strong>autoévaluation</strong> de <u>HTML</u>
-            Nous allons d'abord insérer une image <img src="img/ia.jpg" alt="IA">
+            Nous allons d'abord insérer une image.
         </p>
+        <figure>
+            <img src="img/ia.jpg" alt="Illustration Ia">
+            <figcaption>Intelligence Artificielle</figcaption>
+        </figure>
          <!-- SECTION SERVICES -->
         </section>
-        <section id="Services">
+        <section id="services">
              <!-- j'utilise des balises comme em pour te montrer ce que je maitrise -->
             <article>
                 <h2>Services</h2>
                     <h3>1er Article</h3>
                         <p>
-                            Dans cette article nous allons parler de mes <em>compétences</em> <br>
+                            Dans cette article nous allons parler de mes <em>compétences</em> 
                             <!--Liste ordonnée -->
                             <ol>
                                 <li>HTML</li>
@@ -47,14 +54,11 @@
                             </ul>
                         </p>
             </article>
-             <!--Utilisation de hr pour séparer les articles -->
-            <hr>
             <article>
                 <h3>2eme Article</h3>
                     <p>
-                        <!--Utilisation de br pour aller à la ligne suivante -->
-                        Dans cet aricle on va parler de mes experiences <br>
-                        en tant qu'informaticien. <br>
+                        Dans cet aricle on va parler de mes experiences 
+                        en tant qu'informaticien. 
                         <ol>
                             <li>Developpeur Front End</li>
                             <li>Developpeur Back End</li>
@@ -65,7 +69,6 @@
                         </ul>
                   </p>
             </article>
-            <hr>
             <article>
                 <h3>3eme Article</h3>
                 <p>
@@ -77,48 +80,57 @@
             </article>
         </section>
         <!-- SECTION TABLEAU -->
-        <section id="Tableau">
-            <h2>Tableau des Horaires</h2>
-            <table border="1">
-                <tr>
-                    <th scope="col">Horaires</th>
-                    <th scope="col">Services</th>
-                    <th scope="col">Personnel</th>
-                </tr>
-                <tr>
-                    <td>08H-10H</td>
-                    <td>Photocopie</td>
-                    <td>Mr Fall</td>
-                </tr>
-                <tr>
-                    <td>10H-12H</td>
-                    <td>Scannner</td>
-                    <td>Mme Ba</td>
-                </tr>
+        <section id="tableau">
+            <table>
+                <caption>Horaires des services</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Horaires</th>
+                        <th scope="col">Services</th>
+                        <th scope="col">Personnel</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>08H-10H</td>
+                        <td>Photocopie</td>
+                        <td>Mr Fall</td>
+                    </tr>
+                    <tr>
+                        <td>10H-12H</td>
+                        <td>Scannner</td>
+                        <td>Mme Ba</td>
+                    </tr>
+                </tbody>
             </table>
         </section>
            <!-- SECTION Formulaire -->
-        <section id="Formulaire">
-            <h1>Formulaire avancé</h1>
+        <section id="formulaire">
+            <h2>Formulaire avancé</h2>
             <form action="#" method="post">
-                <label for="prenom">Prenom</label>
-                <input type="text" placeholder="donnez votre prenom" autocomplete="off" required>
-                <label for="nom">Nom</label>
-                <input type="text" placeholder="donnez votre nom" autocomplete="off" required>
-                <label for="email">Email</label>
-                <input type="email" placeholder="donnez votre email" autocomplete="off" required>
-                <label for="telephone">Telephone</label>
-                <input type="number" placeholder="donnez votre numéro" autocomplete="off" required>
-                <label for="datenaissance">Date de Naissance</label>
-                <input type="date" placeholder="donnez votre date" autocomplete="off" required>
-                <label for="password">Mot de passe</label>
-                <input type="password" placeholder="donnez un mot de passe" autocomplete="off" required>
-                <textarea name="message" id="message">Ecrire votre message</textarea>
-                <select name="langue" id="langue" required>
-                    <option value="">Java</option>
-                    <option value="php">PHP</option>
-                </select>
-                <button type="submit">Envoyer</button>
+                <fieldset>
+                    <legend>Informations Personnelles</legend>
+                    <label for="prenom">Prenom</label>
+                    <input id="prenom" name="prenom" type="text" placeholder="donnez votre prenom" autocomplete="off" required>
+                    <label for="nom">Nom</label>
+                    <input id="nom" name="nom" type="text" placeholder="donnez votre nom" autocomplete="off" required>
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" placeholder="donnez votre email" autocomplete="off" required>
+                    <label for="telephone">Telephone</label>
+                    <input id="telephone" name="telephone" type="tel" placeholder="donnez votre numéro" autocomplete="off" required>
+                    <label for="datenaissance">Date de Naissance</label>
+                    <input id="datenaissance" name="datenaissance" type="date" placeholder="donnez votre date" autocomplete="off" required>
+                    <label for="password">Mot de passe</label>
+                    <input id="password" name="password" type="password" placeholder="donnez un mot de passe" autocomplete="off" required>
+                    <textarea name="message" id="message">Ecrire votre message</textarea>
+                    <label for="langue">langue</label>
+                    <select id="langue" name="langue" required>
+                        <option value="">-- Choisissez une langue --</option>
+                        <option value="java">Java</option>
+                        <option value="php">PHP</option>
+                    </select>
+                    <button type="submit">Envoyer</button>
+                </fieldset>
             </form>
         </section>
          <!-- SECTION MULTIMEDIA -->
@@ -127,7 +139,7 @@
              <audio controls>
                 <source src="img/Lawrence.mp3">
              </audio>
-             <iframe src="https://www.youtube.com/watch?v=_NK-AbwA3PM" width="1085" height="700" frameborder="0" allowfullscreen></iframe>
+             <iframe title="Presetation IA" src="https://www.youtube.com/watch?v=_NK-AbwA3PM" width="1085" height="700" frameborder="0" allowfullscreen></iframe>
           </section>
           <!-- SECTION SEMANTIQUE -->
            <section id="Semantique">
@@ -154,7 +166,7 @@
                     <a href="#Semantique">Semantique</a>  
                 </li>
             </ul>
-            <p> & Djiby Fall | Tous droits réservés</p>
+            <p> &copy; Djiby Fall | Tous droits réservés</p>
     </footer>
 </body>
 </html>
